@@ -1,0 +1,17 @@
+---
+published: false
+excerpt_separator: <!--more-->
+categories:
+  - minishift
+  - jx
+  - jenkins
+tags:
+  - minishift
+  - jx
+  - jenkins
+---
+## Inistall minishift
+Install minishift for ubuntu from the relase page on github and kvm driver. Don't forget to enable Intel Virtualization technology in BIOS. Then create a sh file to start minishift since minishift may create a new VM if the parameter changes.
+
+	#!/bin/bash
+	minishift start --cpus 4 --disk-size 40GB --memory 32GB --http-proxy http://192.168.0.105:37103 --https-proxy http://192.168.0.105:37103 --skip-registration --skip-startup-checks
