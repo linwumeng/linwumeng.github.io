@@ -1,6 +1,8 @@
 #
 # This file contains configuration flags to customize your site
 #
+remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Name of your site (displayed in the header)
 name: Your Name
