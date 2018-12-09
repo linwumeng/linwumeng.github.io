@@ -7,8 +7,6 @@ tagline: "Supporting tagline"
 tags: [intro, beginner, jekyll, tutorial]
 excerpt_separator: <!--more--> 
 ---
-{% include JB/setup %}
-
 ## Preface
 I create this blog to record how I grow as my study. By study ways to create a blog, I choose the solution of publishing blog by Jekyll on Github. This solution wins for it is easy to build up and maintain in the future.
 
@@ -81,30 +79,30 @@ Minutes after, I found the [page](http://tecadmin.net/install-ruby-1-9-3-or-mult
 	Step 3: Install RVM (Ruby Version Manager)
 	     $ curl -L get.rvm.io | bash -s stable
 	     The sampel out is like,
-
+	
 	       % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                              Dload  Upload   Total   Spent    Left  Speed
-             100 20511  100 20511    0     0   1120      0  0:00:18  0:00:18 --:--:-- 19722
-             Downloading https://github.com/wayneeseguin/rvm/archive/stable.tar.gz
-             Creating group 'rvm'
-
-             Installing RVM to /usr/local/rvm/
-             Installation of RVM in /usr/local/rvm/ is almost complete:
-
-             * First you need to add all users that will be using rvm to 'rvm' group,
-               and logout - login again, anyone using rvm will be operating with `umask u=rwx,g=rwx,o=rx`.
-
-             * To start using RVM you need to run `source /etc/profile.d/rvm.sh`
-               in all your open shell windows, in rare cases you need to reopen all shell windows.
-
-             # Administrator,
-             #
-             #   Thank you for using RVM!
-             #   We sincerely hope that RVM helps to make your life easier and more enjoyable!!!
-             #
-             # ~Wayne, Michal & team.
-
-             In case of problems: http://rvm.io/help and https://twitter.com/rvm_io
+	                                          Dload  Upload   Total   Spent    Left  Speed
+	         100 20511  100 20511    0     0   1120      0  0:00:18  0:00:18 --:--:-- 19722
+	         Downloading https://github.com/wayneeseguin/rvm/archive/stable.tar.gz
+	         Creating group 'rvm'
+	
+	         Installing RVM to /usr/local/rvm/
+	         Installation of RVM in /usr/local/rvm/ is almost complete:
+	
+	         * First you need to add all users that will be using rvm to 'rvm' group,
+	           and logout - login again, anyone using rvm will be operating with `umask u=rwx,g=rwx,o=rx`.
+	
+	         * To start using RVM you need to run `source /etc/profile.d/rvm.sh`
+	           in all your open shell windows, in rare cases you need to reopen all shell windows.
+	
+	         # Administrator,
+	         #
+	         #   Thank you for using RVM!
+	         #   We sincerely hope that RVM helps to make your life easier and more enjoyable!!!
+	         #
+	         # ~Wayne, Michal & team.
+	
+	         In case of problems: http://rvm.io/help and https://twitter.com/rvm_io
 	Step 4: Setup RVM Environment
 	     $ source /etc/profile.d/rvm.sh
 	Step 5: Install Required Ruby Version
