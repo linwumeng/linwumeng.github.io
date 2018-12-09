@@ -28,7 +28,10 @@ Create `ministart.sh` to start minishift with the same parameters every time.
 
 ```bash
 #!/bin/bash
-minishift start --cpus 4 --disk-size 40GB --memory 32GB --http-proxy http://192.168.0.105:37103 --https-proxy http://192.168.0.105:37103 --skip-registration --skip-startup-checks
+minishift start --cpus 4 --disk-size 40GB --memory 32GB \
+--http-proxy http://192.168.0.105:37103 --https-proxy \
+http://192.168.0.105:37103 \
+--skip-registration --skip-startup-checks
 ```
 
 Then, create the cluster by the sh file. There may be serval errors during the starting up time which can be ignored by restarting.
@@ -49,4 +52,5 @@ echo 'export PATH=$PATH:~/.jx/bin' >> ~/.bashrc
 3. login as developer by `oc login -u developer -p dev`
 4. grant developer permissions, `oc adm policy  --as system:admin add-cluster-role-to-user cluster-admin developer`
 5. install packages to minishift by `jx install --provider=minishift`
+6. disable proxy in the browser, then open jenkins-jx route to login `jenkins-admin` by OAuth
 
