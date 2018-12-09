@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "GoodMail report"
 description: ""
 category: 
 tags: []
 ---
-{% include JB/setup %}
 Code Name: GoodMail
 Goal: The goal of project GoodMail aims to win the code competition by delivery a working software which provides desired functionality.
 Requirement:

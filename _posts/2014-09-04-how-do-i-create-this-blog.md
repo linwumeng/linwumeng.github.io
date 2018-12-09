@@ -1,11 +1,14 @@
 ---
-layout: post
 title: "How do I create this blog?"
-description: ""
-category: lessons 
+categories:
+  - lessons 
 tagline: "Supporting tagline"
-tags: [intro, beginner, jekyll, tutorial]
-excerpt_separator: <!--more--> 
+tags: 
+  - intro
+  - beginner
+  - jekyll
+  - tutorial
+excerpt_separator: "<!--more-->"
 ---
 ## Preface
 I create this blog to record how I grow as my study. By study ways to create a blog, I choose the solution of publishing blog by Jekyll on Github. This solution wins for it is easy to build up and maintain in the future.

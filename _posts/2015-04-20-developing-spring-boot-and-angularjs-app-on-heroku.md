@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Developing Spring Boot and AngularJS app on Heroku"
 description: ""
 category: 
 tags: []
 ---
-{% include JB/setup %}
 #Background
 We started a project using Spring Boot and AngularJS recently. I want to create an experimental project at home to explore new technologies. In the old days, I will create a VM running Linux to deploy the Web Server and Database and develop the app on the Windows since I have the developing environment on the my local box which is running Windows7. However, this solution obvisously slows down my box. Fortunately, more and more cloud providers comes. I'd like to deploy the app on Heroku this time.
 

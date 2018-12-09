@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "Convert PPT to PDF"
 description: "a research on converting PPT to PDF."
 category: 
 tags: [Java Research]
 ---
-{% include JB/setup %}
 Recently, I meet two projects requiring generating or converting documents to PDF. It has been a long time since I did this last time. So I decided to do a small reserch on it first.
 
 As a Java developer, the first idea is to find out if there are convenient Java libraries to generate or convert HTML to PDF. I found the (post)[http://www.javacodegeeks.com/2013/05/java-pdf-libraries.html] talking about the same issue. There are several libs listed in the post:

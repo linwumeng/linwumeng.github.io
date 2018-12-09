@@ -1,11 +1,9 @@
 ---
-layout: post
 title: "How do I create the End of Day report?"
 description: ""
 category: 
 tags: []
 ---
-{% include JB/setup %}
 ## Background
 We inherited a tool based on Excel from the predecessor, which can generate a simple AR list report consisting of two tables. The header table contains a little statistics per teams. The big table below the header is the AR list with data that is important to prioritize the items.
 
@@ -54,7 +52,7 @@ What is the way to escape from the boring mechanism work? Using the computer, of
     {% highlight vb.net%}
     Set objExcel = CreateObject("Excel.Application")
 Set objWB = objExcel.Workbooks.Open("report.xlsm")
-    
+​    
 objExcel.Application.Run "'report.xls'!exportHTML"
 objExcel.Application.Quit
-    {% endhighlight %}
+​    {% endhighlight %}

@@ -1,12 +1,13 @@
 ---
-layout: post
 title: "How do I override the default config file for log4j2?"
 description: "I package the default config file log4j2.xml in jar and override it at deloy time for a singleton java app."
-category: Lessons
-tags: [lesson, tutorial, log4j2]
+categories:
+  - Lessons
+tags: 
+  - lesson
+  - tutorial
+  - log4j2
 ---
-{% include JB/setup %}
-
 ## Preface
 I got a bug report about the auto AR (the term for but in our organization) list notification mail tool this morning. It tells that the age of some ARs is -1. The tool is developed by me for I'm too lazy to send out the notification mail of AR list as morning report to the whole team and management layer. Hence I develop a small app by Groovy to generate the report and send it out every morning automatically.
 
