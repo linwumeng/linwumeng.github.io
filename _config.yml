@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "My Blog"
 title_separator          : "-"
 name                     : "Linwumeng"
-description              : "An amazing website."
+description              : "My writings online."
 url                      : "https://linwumeng.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "linwumeng/linwumeng.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -103,52 +103,25 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
+  name             : "Linwumeng"
+  avatar           : "https://avatars0.githubusercontent.com/u/6905907?s=400&u=e83ba73a16818ab7b8437411544152a391daacaf&v=4" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "I am a Java developer learning machine learning."
+  location         : "Chengdu, Sichuan"
+  email            : "linwumeng@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "mailto:linwumeng@email.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/linwumeng"
 
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://github.com/linwumeng"
 
 
 # Reading Files
