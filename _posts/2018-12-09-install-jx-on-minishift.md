@@ -20,6 +20,8 @@ lantern -addr 192.168.0.105:37103
 > `lantern -addr 0.0.0.0:37103`
 >
 > `jx install` will fail due to `::37103`
+
+
 # install minishift
 
 1. Download minishift from https://github.com/minishift/minishift/releases.
