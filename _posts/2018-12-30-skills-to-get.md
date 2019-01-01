@@ -10,66 +10,52 @@ tags:
 ## JVM
 Java
 Kotlin
-
- * Android
- * Kotlin Native
-
+  * Android
+  * Kotlin Native
 Groovy
-
-	* Gradle
+  * Gradle
 
 ## Front End
 Javascript
-
- * ReactJS
- * Redux
- * Saga
-
+  * ReactJS
+  * Redux
+  * Saga
 Dart
-
- * flutter
+  * flutter
 
 ## Misc
 Python
-​	* Numpy
-​	* Pandas
-​	* Tensorflow
-​		* Keras
-​    	* PyTorch
+  * Numpy
+  * Pandas
+  * Tensorflow
+    * Keras
+    * PyTorch
 Golang
 
 # Architecture
 
 Microservice
-
- * Spring-Cloud
- * Service Gateway
- * Service Mesh
-
+  * Spring-Cloud
+  * Service Gateway
+  * Service Mesh
 Cloud Native
-
- * Kubernetes
- * Openshift
- * GCP
+  * Kubernetes
+  * Openshift
+  * GCP
 
 # Design & Process
 
 OOAD
-
 DDD
 
 # Tech Area
 
 Server Side
-
- * Spring
+  * Spring
     * MVC
     * Data
  * Spring Boot
-
 JHipster
-
 Deep Learning
-
- * Image
- * NLP
+  * Image
+  * NLP
