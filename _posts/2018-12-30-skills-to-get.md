@@ -9,9 +9,11 @@ tags:
 # Language & Framework
 ## JVM
 Java
+
 Kotlin
   * Android
   * Kotlin Native
+
 Groovy
   * Gradle
 
@@ -20,6 +22,7 @@ Javascript
   * ReactJS
   * Redux
   * Saga
+
 Dart
   * flutter
 
@@ -30,6 +33,7 @@ Python
   * Tensorflow
     * Keras
     * PyTorch
+
 Golang
 
 # Architecture
@@ -38,6 +42,7 @@ Microservice
   * Spring-Cloud
   * Service Gateway
   * Service Mesh
+
 Cloud Native
   * Kubernetes
   * Openshift
@@ -46,6 +51,7 @@ Cloud Native
 # Design & Process
 
 OOAD
+
 DDD
 
 # Tech Area
@@ -55,7 +61,9 @@ Server Side
     * MVC
     * Data
  * Spring Boot
+
 JHipster
+
 Deep Learning
   * Image
   * NLP
