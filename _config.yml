@@ -104,8 +104,8 @@ analytics:
 # Site Author
 author:
   name             : "Linwumeng"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
+  avatar           : "https://avatars0.githubusercontent.com/u/6905907?s=400&u=e83ba73a16818ab7b8437411544152a391daacaf&v=4"
+  bio              : "I am a Java developer with more then 10 years enterprise software developing experience and heavy interesting in deep learning."
   location         : "Chengdu, Sichuan"
   email            :
   links:
