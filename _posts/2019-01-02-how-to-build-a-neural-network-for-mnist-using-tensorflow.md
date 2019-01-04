@@ -48,20 +48,24 @@ Till now, the classification problem is transformed into a linear regression pro
 [Not another MNIST tutorial with tensorflow](https://www.oreilly.com/learning/not-another-mnist-tutorial-with-tensorflow) gives a single layer Neural Network for this problem. An image of 28x28 is flat as a 1x784 vector to be the input layer of the network. Each pixel of the image is a node in the network linking to neuron in the output layer. As discussed previously, there are 10 neuron in the output layer to give a 1x10 vector as output in which each number in a position representing the probability of that the image belongs to that category. Each neuron accepts 784 inputs and give one output. The output is the input multiplying Weight and adding a Bias.
 
 $$
-y = \begin{bmatrix}x_{0}
-\\ x_{1}
-\\ x_{2}
-\\ \cdot
-\\ \cdot
-\\ \cdot
-\\ x_{783}
-\end{bmatrix}\times
-\begin{bmatrix}w_{0,0}
+y = \begin{bmatrix}w_{0,0}
  & w_{0,1} & w_{0,2} & \cdot & \cdot & \cdot & w_{0,783}\\w_{1,0} 
  & \cdot & \cdot & \cdot &  &  & w_{1,783} \\ \cdot
  &  &  &  &  &  & \\ \cdot
  &  &  &  &  &  & \\ \cdot
  &  &  &  &  &  & \\ w_{9, 0}
  & w_{9,1}  & \cdot & \cdot & \cdot &  & w_{9,783}
-\end{bmatrix}+ \begin{bmatrix}b_{0,0}\\b_{1,0}\\b_{2,0}\\ \cdot \\ \cdot \\ \cdot \\ b_{9,0} \end{bmatrix}
+\end{bmatrix} \times \begin{bmatrix}x_{0}
+\\ x_{1}
+\\ x_{2}
+\\ \cdot
+\\ \cdot
+\\ \cdot
+\\ x_{783}
+\end{bmatrix} + \begin{bmatrix}b_{0,0}\\b_{1,0}\\b_{2,0}\\ \cdot \\ \cdot \\ \cdot \\ b_{9,0} \end{bmatrix}
 $$
+
+## architecture
+![](/single-layer-nn.png)
+
+## Step 1 Preparation
