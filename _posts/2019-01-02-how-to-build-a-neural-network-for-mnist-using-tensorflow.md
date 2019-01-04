@@ -73,14 +73,14 @@ The second article introduces a network of the following architecture. It'a a si
 ## Step 1 Preparation
 ### install dependencies
 Execute the following commands to setup virtual environment for the project.
-```
+```bash
 $ mkdir tensorflow-demo
 $ cd tensorflow-demo
 $ python3 -m venv tensorflow-demo
 $ source tensorflow-demo/bin/activate
 ```
 Next, install required libraries from `requirements.txt`.
-```
+```bash
 $ touch requirements.txt
 ```
 Add the following lines to the file.
@@ -91,13 +91,13 @@ tensorflow-gpu>=1.4.1
 jupyter>=4.0
 ```
 Save and install libraries by the following command.
-```
+```bash
 $ pip install -r requirements.txt
 ```
 With the dependencies installed, we can start with the project.
 ### Use jupyter notebook remotely
 Execute the following commands in Ubuntu to start up jupyter note book. The proxy is optional depending on the running environment.
-```
+```bash
 $ export http_proxy=http://192.168.0.105:37103
 $ export https_proxy=http://192.168.0.105:37103
 $ jupyter notebook --no-browser
@@ -110,7 +110,7 @@ $ jupyter notebook --no-browser
         http://localhost:8888/?token=f244ddc108cc3d1e33c4d868ba7c088b45bdd73a67a1bcf7
 ```
 If we want to access the notebook from Windows, we need forward port by ssh. Open a `cmder` console to execute.
-```
+```bash
 ssh -L 8080:localhost:8888 linwumeng@192.168.0.105
 ```
 Then, we can open Chrome with url `http://localhost:8080/?token=f244ddc108cc3d1e33c4d868ba7c088b45bdd73a67a1bcf7` to create a new notebook file.
