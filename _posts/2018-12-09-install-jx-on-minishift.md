@@ -7,8 +7,7 @@ tags:
   - minishift
   - jenkins
   - jx
-typora-root-url: ..\images
-typora-copy-images-to: ..\images
+typora-root-url: ..\
 ---
 
 # Proxy
@@ -71,7 +70,7 @@ echo 'export PATH=$PATH:~/.jx/bin' >> ~/.bashrc
 
 7. open jx project to find `jenkins-docker-cfg` secret. Reveal it to get the content, like
 
-   ![jenkins-docker-cfg](/jenkins-docker-cfg-1545556182006.PNG)
+   ![jenkins-docker-cfg](/images/jenkins-docker-cfg-1545556182006.PNG)
 
 8. copy the content to an online base64 tool to change the registry from `docker-registry.default.svc:5000` to `172.30.1.1:5000`
 
@@ -90,7 +89,7 @@ echo 'export PATH=$PATH:~/.jx/bin' >> ~/.bashrc
  ```
 10. open jenkins to config kubernetes plugin to use new secret `jenkins-docker-login` for `maven` node
 
-    ![jenkins secret](/jenkins%20secret.PNG)
+    ![jenkins secret](/images/jenkins%20secret.PNG)
 
 11. import your project by `jx import --url=<YOUR GIT URL>`
 
