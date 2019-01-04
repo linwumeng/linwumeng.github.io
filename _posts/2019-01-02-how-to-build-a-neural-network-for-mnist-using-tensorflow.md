@@ -53,3 +53,5 @@ $$
    c & d
 \end{bmatrix}
 $$
+
+$$\frac{\partial f(y)}{\partial x} = \frac{\partial f}{\partial y} \times \frac{\partial y}{\partial x}$$
