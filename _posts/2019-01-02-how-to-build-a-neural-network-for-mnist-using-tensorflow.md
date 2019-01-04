@@ -66,6 +66,6 @@ y = \begin{bmatrix}w_{0,0}
 $$
 
 ## architecture
-![](/single-layer-nn.png)
+![](/images/single-layer-nn.png)
 
 ## Step 1 Preparation
