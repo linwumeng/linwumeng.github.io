@@ -160,3 +160,62 @@ $$
 \end{matrix}
 $$
 
+The python code will download MNIST data from internet and unzip it into the folder `MNIST_DATA` under the path where we run `jupyter notebook`.
+
+Next, we'd like to have a look at the data set. How many are there? What do they look like?
+```python
+n_train = mnist.train.num_examples
+n_test = mnist.test.num_examples
+
+def TRAIN_SIZE(num):
+    print ('Total Training Images in Dataset = ' + str(mnist.train.images.shape))
+    print ('--------------------------------------------------')
+    x_train = mnist.train.images[:num,:]
+    print ('x_train Examples Loaded = ' + str(x_train.shape))
+    y_train = mnist.train.labels[:num,:]
+    print ('y_train Examples Loaded = ' + str(y_train.shape))
+    print('')
+    return x_train, y_train
+
+def TEST_SIZE(num):
+    print ('Total Test Examples in Dataset = ' + str(mnist.test.images.shape))
+    print ('--------------------------------------------------')
+    x_test = mnist.test.images[:num,:]
+    print ('x_test Examples Loaded = ' + str(x_test.shape))
+    y_test = mnist.test.labels[:num,:]
+    print ('y_test Examples Loaded = ' + str(y_test.shape))
+    return x_test, y_test
+
+x_train, y_train = TRAIN_SIZE(n_train)
+x_test, y_test = TEST_SIZE(n_test)
+```
+We will get the output,
+```
+Total Training Images in Dataset = (55000, 784)
+--------------------------------------------------
+x_train Examples Loaded = (55000, 784)
+y_train Examples Loaded = (55000, 10)
+
+Total Test Examples in Dataset = (10000, 784)
+--------------------------------------------------
+x_test Examples Loaded = (10000, 784)
+y_test Examples Loaded = (10000, 10)
+```
+
+Let us have a look at same images in train set.
+```python
+def display_digit(num):
+    print(y_train[num])
+    label = y_train[num].argmax(axis=0)
+    image = x_train[num].reshape([28,28])
+    plt.title('Example: %d  Label: %d' % (num, label))
+    plt.imshow(image, cmap=plt.get_cmap('gray_r'))
+    plt.show()
+
+display_digit(0)
+display_digit(55000)
+```
+![](/images/mnist-sample-0.PNG)
+![](/images/mnist-sample-54999.PNG)
+
+Now, we have loaded MNIST dataset into the memory.
