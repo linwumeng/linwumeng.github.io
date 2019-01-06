@@ -239,6 +239,8 @@ b = tf.Variable(tf.zeros([n_output]))
 
 y = tf.nn.softmax(tf.matmul(x,W) + b)
 
+LEARNING_RATE = 0.1
+TRAIN_STEPS = 10000
 cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
 training = tf.train.GradientDescentOptimizer(LEARNING_RATE).minimize(cross_entropy)
 ```
@@ -251,8 +253,6 @@ training = tf.train.GradientDescentOptimizer(LEARNING_RATE).minimize(cross_entro
 correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
-LEARNING_RATE = 0.1
-TRAIN_STEPS = 10000
 init = tf.global_variables_initializer()
 sess.run(init)
 
@@ -262,7 +262,7 @@ for i in range(TRAIN_STEPS+1):
         print('Training Step:' + str(i) + '  Accuracy =  ' + str(sess.run(accuracy, feed_dict={x: x_test, y_: y_test})) + '  Loss = ' + str(sess.run(cross_entropy, {x: x_train, y_: y_train})))
 ```
 
-The output we get is,
+Then, we get the output below,
 
 ```
 Total Training Images in Dataset = (55000, 784)
