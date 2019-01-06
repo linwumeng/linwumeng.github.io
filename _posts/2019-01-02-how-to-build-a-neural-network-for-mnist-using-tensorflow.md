@@ -246,6 +246,7 @@ training = tf.train.GradientDescentOptimizer(LEARNING_RATE).minimize(cross_entro
 > The training process involves feeding the training dataset through the graph and optimizing the loss function. Every time the network iterates through a batch of more training images, it updates the parameters to reduce the loss in order to more accurately predict the digits shown.
 
 > The testing process involves running our testing dataset through the trained graph, and keeping track of the number of images that are correctly predicted, so that we can calculate the accuracy.
+
 ```
 correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
@@ -260,7 +261,9 @@ for i in range(TRAIN_STEPS+1):
     if i%500 == 0:
         print('Training Step:' + str(i) + '  Accuracy =  ' + str(sess.run(accuracy, feed_dict={x: x_test, y_: y_test})) + '  Loss = ' + str(sess.run(cross_entropy, {x: x_train, y_: y_train})))
 ```
+
 The output we get is,
+
 ```
 Total Training Images in Dataset = (55000, 784)
 --------------------------------------------------
@@ -293,5 +296,6 @@ Training Step:9000  Accuracy =  0.9048  Loss = 0.1628524
 Training Step:9500  Accuracy =  0.9048  Loss = 0.15975307
 Training Step:10000  Accuracy =  0.9042  Loss = 0.15681869
 ```
+
 Amazing, the single layer neuron give more than 90% accuracy!
 
