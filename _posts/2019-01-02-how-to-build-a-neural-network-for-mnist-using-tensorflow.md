@@ -160,7 +160,7 @@ $$
 \end{matrix}
 $$
 
-The python code will download MNIST data from internet and unzip it into the folder `MNIST_DATA` under the path where we run `jupyter notebook`.
+The python code will download MNIST data from internet and unzip it into the folder `MNIST_data` under the path where we run `jupyter notebook`.
 
 Next, we'd like to have a look at the data set. How many are there? What do they look like?
 ```python
@@ -219,3 +219,79 @@ display_digit(55000)
 ![](/images/mnist-sample-54999.PNG)
 
 Now, we have loaded MNIST dataset into the memory.
+## Step 3 Building the TensorFlow Graph
+
+> The architecture of the neural network refers to elements such as the number of layers in the network, the number of units in each layer, and how the units are connected between layers. 
+
+> The term hidden layer is used for all of the layers in between the input and output layers, i.e. those "hidden" from the real world.
+
+Our first neural network has only one layer of neurons as the output layer. The input layer accepts 784 pixels of the 28x28 image, then passing them to the output layer for computing. The output from the output layer is a 1x10 vector representing the predicted probability distribution of the images being of the categories which is used to compute cross entroy with the real distribution where only one position has value 1, and others are all 0.
+
+```python
+n_input = 784 # input layer (28x28 pixels)
+n_output = 10 # output layer (0-9 digits)
+
+X = tf.placeholder(tf.float32, shape=[None, n_input])
+Y = tf.placeholder(tf.float32, shape=[None, n_output])
+
+W = tf.Variable(tf.zeros([n_input,n_output]))
+b = tf.Variable(tf.zeros([n_output]))
+
+y = tf.nn.softmax(tf.matmul(x,W) + b)
+
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
+training = tf.train.GradientDescentOptimizer(LEARNING_RATE).minimize(cross_entropy)
+```
+## Step 4 Training and Testing
+> The training process involves feeding the training dataset through the graph and optimizing the loss function. Every time the network iterates through a batch of more training images, it updates the parameters to reduce the loss in order to more accurately predict the digits shown.
+
+> The testing process involves running our testing dataset through the trained graph, and keeping track of the number of images that are correctly predicted, so that we can calculate the accuracy.
+```
+correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+
+LEARNING_RATE = 0.1
+TRAIN_STEPS = 10000
+init = tf.global_variables_initializer()
+sess.run(init)
+
+for i in range(TRAIN_STEPS+1):
+    sess.run(training, feed_dict={x: x_train, y_: y_train})
+    if i%500 == 0:
+        print('Training Step:' + str(i) + '  Accuracy =  ' + str(sess.run(accuracy, feed_dict={x: x_test, y_: y_test})) + '  Loss = ' + str(sess.run(cross_entropy, {x: x_train, y_: y_train})))
+```
+The output we get is,
+```
+Total Training Images in Dataset = (55000, 784)
+--------------------------------------------------
+x_train Examples Loaded = (5500, 784)
+y_train Examples Loaded = (5500, 10)
+
+Total Test Examples in Dataset = (10000, 784)
+--------------------------------------------------
+x_test Examples Loaded = (10000, 784)
+y_test Examples Loaded = (10000, 10)
+Training Step:0  Accuracy =  0.5988  Loss = 2.1881988
+Training Step:500  Accuracy =  0.8943  Loss = 0.35697538
+Training Step:1000  Accuracy =  0.9009  Loss = 0.3010645
+Training Step:1500  Accuracy =  0.9048  Loss = 0.27260992
+Training Step:2000  Accuracy =  0.9066  Loss = 0.2535662
+Training Step:2500  Accuracy =  0.9067  Loss = 0.23929419
+Training Step:3000  Accuracy =  0.9059  Loss = 0.227906
+Training Step:3500  Accuracy =  0.9056  Loss = 0.21844491
+Training Step:4000  Accuracy =  0.9061  Loss = 0.21035966
+Training Step:4500  Accuracy =  0.9064  Loss = 0.20330402
+Training Step:5000  Accuracy =  0.9056  Loss = 0.19704688
+Training Step:5500  Accuracy =  0.9059  Loss = 0.1914264
+Training Step:6000  Accuracy =  0.9065  Loss = 0.18632501
+Training Step:6500  Accuracy =  0.9063  Loss = 0.1816549
+Training Step:7000  Accuracy =  0.9063  Loss = 0.17734852
+Training Step:7500  Accuracy =  0.9057  Loss = 0.17335325
+Training Step:8000  Accuracy =  0.9054  Loss = 0.16962707
+Training Step:8500  Accuracy =  0.9049  Loss = 0.16613606
+Training Step:9000  Accuracy =  0.9048  Loss = 0.1628524
+Training Step:9500  Accuracy =  0.9048  Loss = 0.15975307
+Training Step:10000  Accuracy =  0.9042  Loss = 0.15681869
+```
+Amazing, the single layer neuron give more than 90% accuracy!
+
