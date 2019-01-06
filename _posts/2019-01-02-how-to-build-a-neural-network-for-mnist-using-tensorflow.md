@@ -213,7 +213,7 @@ def display_digit(num):
     plt.show()
 
 display_digit(0)
-display_digit(55000)
+display_digit(54999)
 ```
 ![](/images/mnist-sample-0.PNG)
 ![](/images/mnist-sample-54999.PNG)
