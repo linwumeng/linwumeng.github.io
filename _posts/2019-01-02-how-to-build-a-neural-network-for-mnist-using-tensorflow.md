@@ -262,7 +262,7 @@ for i in range(TRAIN_STEPS+1):
         print('Training Step:' + str(i) + '  Accuracy =  ' + str(sess.run(accuracy, feed_dict={x: x_test, y_: y_test})) + '  Loss = ' + str(sess.run(cross_entropy, {x: x_train, y_: y_train})))
 ```
 
-The output we get is,
+Then, we get the output below,
 
 ```
 Total Training Images in Dataset = (55000, 784)
