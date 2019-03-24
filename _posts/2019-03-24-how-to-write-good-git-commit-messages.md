@@ -9,6 +9,7 @@ tags:
 typora-root-url: ..\
 ---
 ![](https://imgs.xkcd.com/comics/git_commit_2x.png)
+<<<<<<< HEAD
 It's totally true that the commit messages of a repo become less and less informative as project goes. The article, [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/), gives good guidance to address the issue.
 
 The seven suggestions are,
@@ -24,3 +25,6 @@ Further suggestions are,
 1. Prefer to small checking with [WIP] in title.
 1. Think of your reviewer by review your pull request first to ensure it's reviewable.
 1. Use `git rebase -i HASH` to revise and squarsh commits for a releasable feature.
+=======
+It's totally true that the commit messages of a repo become less and less informative as project goes. The article, [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/), gives good guidance to address the issue.
+>>>>>>> 1d726e6... draft version
