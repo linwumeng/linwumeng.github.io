@@ -9,15 +9,7 @@ tags:
 typora-root-url: ..\
 ---
 ![](https://imgs.xkcd.com/comics/git_commit_2x.png)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b63cf1... add
-=======
-
->>>>>>> 703dc9e... Fix format issue
 It's totally true that the commit messages of a repo become less and less informative as project goes. The article, [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/), gives good guidance to address the issue.
 
 The seven suggestions are,
